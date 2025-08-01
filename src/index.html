@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="output.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+        <title>Generate Password</title>
+    </head>
+    <body
+        class="m-0 p-0 box-border font-gilroy font-bold w-screen h-screen bg-gray-200"
+    >
+        <div id="main" class="main-div">
+            <div class="inside-div">
+                <h1 class="select-none text-xl cursor-text">
+                    Generate a <br /><span
+                        class="underline underline-offset-8 decoration-2 decoration-emerald-400"
+                        >Random <span id="txt1">Password</span></span
+                    >
+                </h1>
+                <div class="w-full relative">
+                    <input
+                        type="text"
+                        id="pass"
+                        readonly
+                        class="p-2 placeholder:font-medium inp pr-10"
+                        placeholder="Password"
+                    />
+                    <span
+                        id="copy_icon"
+                        class="text-slate-500 absolute right-3 top-1/2 transform -translate-y-1/2 select-none cursor-pointer material-symbols-outlined"
+                    >
+                        content_copy
+                    </span>
+                </div>
+                <div
+                    id="pass-length"
+                    class="select-none cursor-text flex gap-3"
+                >
+                    <p><span id="txt2">Password</span> Length :</p>
+                    <span id="sliderValue" class="text-violet-400">9</span>
+                </div>
+                <input
+                    type="range"
+                    name="lengthSlider"
+                    id="lengthSlider"
+                    min="4"
+                    max="24"
+                    class="range-thumb appearance-none bg-violet-400 w-full h-1 outline-none rounded-full mb-3"
+                />
+                <div
+                    class="row shadow-md ring-1 ring-sec shadow-sec rounded-md p-3 flex m-1 items-center gap-2 active:scale-95 transition-all duration-150 w-full relative right-1 cursor-pointer active:shadow-none active:transition-shadow active:duration-250"
+                >
+                    <span
+                        class="select-none cursor-pointer material-symbols-outlined checkbox"
+                    >
+                        radio_button_unchecked
+                    </span>
+                    <label for="upperCase" class="cursor-pointer select-none"
+                        >Include Uppercase Letters (A-Z)</label
+                    >
+                    <input
+                        type="checkbox"
+                        name=""
+                        id="upperCase"
+                        class="cursor-pointer hidden"
+                    />
+                </div>
+                <div
+                    class="row shadow-md ring-1 ring-sec shadow-sec rounded-md p-3 flex m-1 items-center gap-2 active:scale-95 transition-all duration-150 w-full relative right-1 cursor-pointer select-none active:shadow-none active:transition-shadow active:duration-250"
+                >
+                    <span
+                        class="select-none cursor-pointer material-symbols-outlined checkbox"
+                    >
+                        radio_button_unchecked
+                    </span>
+                    <label for="lowerCase" class="cursor-pointer"
+                        >Include Lowercase Letters (a-z)</label
+                    >
+                    <input
+                        type="checkbox"
+                        name=""
+                        id="lowerCase"
+                        class="cursor-pointer hidden"
+                    />
+                </div>
+                <div
+                    class="row select-none shadow-md ring-1 ring-sec shadow-sec rounded-md p-3 flex m-1 items-center gap-2 active:scale-95 transition-all duration-150 w-full relative right-1 cursor-pointer active:shadow-none active:transition-shadow active:duration-250"
+                >
+                    <span
+                        class="select-none cursor-pointer material-symbols-outlined checkbox"
+                    >
+                        radio_button_unchecked
+                    </span>
+                    <label for="symbols">Include Symbols (! @ # $ % *)</label>
+                    <input
+                        type="checkbox"
+                        name=""
+                        id="symbols"
+                        class="cursor-pointer hidden"
+                    />
+                </div>
+                <div
+                    class="row select-none shadow-md ring-1 ring-sec shadow-sec rounded-md p-3 flex m-1 items-center gap-2 active:scale-95 transition-all duration-150 w-full relative right-1 cursor-pointer active:shadow-none active:transition-shadow active:duration-250"
+                >
+                    <span
+                        class="select-none cursor-pointer material-symbols-outlined checkbox"
+                    >
+                        radio_button_unchecked
+                    </span>
+                    <label for="numbers">Include Numbers (0-9)</label>
+                    <input
+                        type="checkbox"
+                        name=""
+                        id="numbers"
+                        class="cursor-pointer hidden"
+                    />
+                </div>
+                <div
+                    id="btn"
+                    class="flex gap-1 pr-2 select-none w-full justify-center items-center btn"
+                >
+                    <span class="text-emerald-400 material-symbols-outlined">
+                        youtube_searched_for
+                    </span>
+                    <span>Generate</span>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+/*
+To install tailwind CSS Run this in terminal:
+npm install tailwindcss @tailwindcss/cli
+
+To watch Changes in CSS: (in Terminal)
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+*/
+
+/* Custom fonts url */
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+/*--------------------------------------------------------*/
+
+@import "tailwindcss";
+
+@theme {
+    /* Custom colors */
+    --color-prim: #1c1c1c;
+    --color-sec: #2c2c2c;
+
+    /* Custom fonts */
+    --font-gilroy-md: "Gilroy-Medium", sans-serif;
+    --font-gilroy-bold: "Gilroy-Bold", sans-serif;
+    --font-gilroy: "Gilroy-Regular", sans-serif;
+}
+
+/* Custom Components */
+@layer components {
+    /* Body div component (styling) */
+    .body {
+        @apply m-0 p-0 box-border font-gilroy font-bold w-screen h-screen bg-gray-200;
+    }
+
+    /* Main div component (styling) */
+    .main-div {
+        @apply w-screen h-screen flex flex-col justify-center items-center bg-prim text-white gap-y-5;
+    }
+
+    /* Container div component */
+    .inside-div {
+        @apply p-4 rounded-md ring-1 ring-sec shadow-lg flex flex-col justify-center items-start gap-4;
+    }
+
+    /* Button component */
+    .btn {
+        @apply bg-sec active:scale-90 transition-all duration-150 rounded-md cursor-pointer shadow-md flex justify-center items-center font-medium p-1;
+    }
+
+    /* input box component */
+    .inp {
+        @apply bg-sec rounded-md outline-none text-start w-full relative pl-3 p-1;
+    }
+
+    /* msg component */
+    .msg {
+        @apply text-red-400 text-[0.8rem];
+    }
+
+    .range-thumb::-webkit-slider-thumb {
+        @apply appearance-none h-4 w-4 rounded-full bg-violet-400 ring-3 cursor-pointer ring-prim;
+    }
+
+    .range-thumb::-moz-range-thumb {
+        @apply appearance-none h-4 w-4 rounded-full bg-violet-400 ring-3 cursor-pointer ring-prim;
+    }
+}
